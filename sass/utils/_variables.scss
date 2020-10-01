@@ -1,0 +1,40 @@
+$primary-text-color: #757575;
+$title-text-color: #212121;
+$accent-color: #ffffff;
+$second-accent-color: #2196f3;
+$background-color: #e5e5e5;
+$black-color: #000000;
+$second-background-color: #2f303a;
+$third-background-color: #f5f4fa;
+$footer-color: rgba(255, 255, 255, 0.6);
+$box-shadow-color: rgba(0, 0, 0, 0.15);
+$icon-color: #afb1b8;
+$timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+@font-face {
+  font-family: Roboto, sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Roboto, sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Roboto, sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Raleway, sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@700&display=swap");
+  font-weight: 700;
+  font-style: normal;
+}

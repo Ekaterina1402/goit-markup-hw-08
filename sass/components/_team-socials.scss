@@ -1,0 +1,37 @@
+.social-icon-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding-left: 0;
+}
+.social-icon-item:not(:last-child) {
+  margin-right: 10px;
+}
+.social-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: $accent-color;
+  border: transparent;
+  border-radius: 50%;
+  transition: background-color $timing-function, fill $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $second-accent-color;
+    border-radius: 50%;
+    fill: $accent-color;
+  }
+}
+.social-icon-link:hover .social-icon,
+.social-icon-link:focus .social-icon {
+  fill: $accent-color;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: $icon-color;
+}

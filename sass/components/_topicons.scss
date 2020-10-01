@@ -1,0 +1,24 @@
+.mail-icon {
+  align-self: center;
+  margin: 0 10px 0 0;
+}
+.mail {
+  display: flex;
+  fill: $primary-text-color;
+  transition: fill $timing-function;
+}
+.phone-icon {
+  align-self: center;
+  margin: 0 10px 0 0;
+}
+.telephone {
+  display: flex;
+  fill: $primary-text-color;
+  transition: fill $timing-function;
+}
+.addr-links .mail:hover,
+.addr-links .telephone:hover,
+.addr-links .mail:focus,
+.addr-links .telephone:focus {
+  fill: $second-accent-color;
+}

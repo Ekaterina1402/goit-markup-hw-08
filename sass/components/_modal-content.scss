@@ -1,0 +1,15 @@
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.modal-title {
+  display: block;
+  margin: 0 0 12px 0;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: $title-text-color;
+}

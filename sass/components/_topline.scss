@@ -1,0 +1,11 @@
+.top-line {
+  align-items: center;
+  background-color: $accent-color;
+  color: $accent-color;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #ececec;
+}
+
+.top-line .flexbox {
+  justify-content: flex-end;
+}
