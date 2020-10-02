@@ -1,6 +1,11 @@
 .examples {
-  padding-bottom: 94px;
-  background-color: $accent-color;
+  display: none;
+
+  @include for-size(desktop) {
+    display: block;
+    padding-bottom: 94px;
+    background-color: $accent-color;
+  }
 }
 
 .works-list {
@@ -32,6 +37,7 @@
   text-align: center;
   letter-spacing: 0.03em;
 }
+
 .whatwedo-item {
   position: relative;
 }

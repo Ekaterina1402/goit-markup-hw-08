@@ -26,6 +26,10 @@
   font-style: normal;
 }
 
+* {
+  outline: 2px solid red;
+}
+
 body {
   font-family: Roboto, sans-serif;
   color: #757575;
@@ -39,17 +43,31 @@ ul {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
 }
 
-.flexbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .section {
@@ -58,7 +76,6 @@ ul {
 }
 
 .content-box {
-  width: calc(1 / 3 (100%- (30px) * 4));
   margin-bottom: 0px;
   margin-left: 0;
   vertical-align: top;
@@ -91,17 +108,33 @@ img {
 }
 
 .logo {
-  padding-top: 24px;
-  padding-bottom: 25px;
-  margin-right: 93px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   color: #000000;
   text-decoration: none;
   font-family: Raleway, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-right: 88px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+    font-size: 26px;
+  }
 }
 
 .logo-header {
@@ -169,14 +202,21 @@ img {
   color: #ffffff;
   display: block;
   text-align: center;
-  padding-bottom: 200px;
-  padding-top: 200px;
+  padding-bottom: 118px;
+  padding-top: 118px;
+}
+
+@media (min-width: 1200px) {
+  .order-service {
+    padding-bottom: 200px;
+    padding-top: 200px;
+  }
 }
 
 .order-service-title {
   margin-top: 0;
   margin-bottom: 30px;
-  max-width: 700px;
+  max-width: 360px;
   margin-left: auto;
   margin-right: auto;
   vertical-align: middle;
@@ -184,14 +224,22 @@ img {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 900;
-  font-size: 44px;
+  font-size: 26px;
   line-height: 1.3;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   width: 696px;
-  height: 120px;
   left: 467px;
   top: 280px;
+}
+
+@media (min-width: 1200px) {
+  .order-service-title {
+    font-size: 44px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .button {
@@ -217,6 +265,10 @@ img {
 
 .button:hover, .button:focus {
   background-color: #188ce8;
+}
+
+.navigation-wrap {
+  display: none;
 }
 
 .top-line .mail {
@@ -337,6 +389,15 @@ img {
 
 .features-list {
   margin: 0;
+  display: block;
+}
+
+@media (min-width: 1200px) {
+  .features-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .features-list .title {
@@ -363,15 +424,16 @@ img {
   letter-spacing: 0.03em;
 }
 
-.features-box {
-  width: calc(1 / 3 (100%- (30px) * 4));
-  margin-bottom: 0px;
-  margin-left: 0;
-  vertical-align: top;
-}
-
-.features-box:not(:last-child) {
-  margin-right: 30px;
+@media (min-width: 1200px) {
+  .features-box {
+    width: calc(1 / 3 (100%- (30px) * 4));
+    margin-bottom: 0px;
+    margin-left: 0;
+    vertical-align: top;
+  }
+  .features-box:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .features-box::before {
@@ -409,8 +471,15 @@ img {
 }
 
 .examples {
-  padding-bottom: 94px;
-  background-color: #ffffff;
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .examples {
+    display: block;
+    padding-bottom: 94px;
+    background-color: #ffffff;
+  }
 }
 
 .works-list {
