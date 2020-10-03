@@ -27,15 +27,20 @@
 .examples-titel,
 .team-title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: $title-text-color;
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.03em;
+
+  @include for-size(desktop) {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
 }
 
 .whatwedo-item {

@@ -70,9 +70,22 @@ ul {
   }
 }
 
+.flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .content-box {
@@ -387,9 +400,24 @@ img {
   background: #ffffff;
 }
 
-.features-list {
-  margin: 0;
-  display: block;
+@media (min-width: 480px) {
+  .features-list {
+    margin: 0;
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .features-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -397,6 +425,8 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 }
 
@@ -422,6 +452,32 @@ img {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
+}
+
+@media (min-width: 480px) {
+  .features-list .text {
+    margin-bottom: 30px;
+  }
+}
+
+.features-box {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .features-box {
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
+  .features-box:not(:last-child) {
+    margin-right: 30px;
+  }
+  .features-box:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+  .features-box:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -504,15 +560,23 @@ img {
 .examples-titel,
 .team-title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: #212121;
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+@media (min-width: 1200px) {
+  .examples-titel,
+  .team-title {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
 }
 
 .whatwedo-item {
