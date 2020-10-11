@@ -1,5 +1,5 @@
 .navigation-wrap {
-  display: none;
+  //display: none;
 }
 
 .top-line .mail {
@@ -79,6 +79,7 @@
     color: $second-accent-color;
   }
 }
+
 .nav-links {
   margin: 0;
   padding: 0;
@@ -97,5 +98,20 @@
 
   &:not(:last-child) {
     margin-right: 50px;
+  }
+}
+.nav-links,
+.addr-links {
+  @media screen and (min-width: 319px) and (max-width: 767px) {
+    display: none;
+  }
+}
+.addr-links {
+  display: none;
+  @include for-size(tablet) {
+    display: block;
+  }
+  @include for-size(desktop) {
+    display: flex;
   }
 }

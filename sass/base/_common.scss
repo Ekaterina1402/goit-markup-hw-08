@@ -1,5 +1,5 @@
 * {
-  outline: 2px solid red;
+  //outline: 2px solid red;
 }
 
 body {
@@ -37,7 +37,10 @@ ul {
 }
 
 .flexbox {
-  display: flex;
+  @include for-size(desktop) {
+    display: flex;
+  }
+  //display: flex;
 }
 
 .section {
@@ -63,6 +66,10 @@ ul {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
+
+  @include for-size(desktop) {
+    max-width: 100%;
+  }
 }

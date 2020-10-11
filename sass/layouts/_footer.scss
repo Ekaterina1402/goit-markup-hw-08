@@ -1,18 +1,57 @@
 .container-footer {
   display: block;
-  width: calc((100% - 30px * 3) / 4);
+  max-width: 100%;
+
+  @include for-size(desktop) {
+    width: calc((100% - 40px * 3) / 4);
+  }
+}
+.address-link {
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+.container-footer:not(:last-child) {
+  margin-bottom: 60px;
+
+  @include for-size(tablet) {
+    width: 50%;
+  }
+
+  @include for-size(desktop) {
+    width: calc((50% - 45px) / 2);
+  }
+}
+
+.container-footer:last-child {
+  width: 100%;
+
+  @include for-size(desktop) {
+    width: calc(50% - 15px);
+  }
+}
+.flex-container {
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 .email-container {
-  width: 570px;
+  width: 100%;
 }
 .addr-conteiner {
-  width: 231px;
-  margin-right: 70px;
+  width: 100%;
 }
+
 .icons-container {
-  width: 206px;
+  width: 100%;
   align-content: flex-start;
-  margin-right: 93px;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 60px;
+  }
 }
 .footer-addr {
   color: $accent-color;
@@ -63,6 +102,14 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background: $second-background-color;
+
+  @include for-size(tablet) {
+    display: flex;
+  }
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .logo-footer {
@@ -118,23 +165,37 @@ input {
 }
 
 .footer-flex {
-  display: flex;
-  flex-direction: row;
+  @include for-size(desktop) {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .input-submit {
   padding-left: 16px;
   margin-right: 12px;
-  width: 358px;
+  max-width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   background-color: var(--secondary-bck-color);
   color: var(--accent-rgba-color);
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 450px;
+  }
+
+  @include for-size(desktop) {
+    width: 358px;
+  }
 }
 
 .btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   padding-left: 28px;
   padding-right: 29px;
@@ -147,4 +208,9 @@ input {
   height: 22px;
   margin-left: 10px;
   fill: $accent-color;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
 }

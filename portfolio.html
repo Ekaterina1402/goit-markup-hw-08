@@ -22,40 +22,45 @@
           >
 
           <!--Навигация на другие страницы-->
-          <ul class="nav-links list">
-            <li class="item item-nav">
-              <a href="./index.html" class="link">Студия</a>
-            </li>
-            <li class="item item-nav">
-              <a href="./portfolio.html" class="link current">Портфолио</a>
-            </li>
-            <li class="item item-nav">
-              <a href="" class="link">Контакты</a>
-            </li>
-          </ul>
+
+          <div class="navigation-wrap">
+            <ul class="nav-links list">
+              <li class="item item-nav">
+                <a href="./index.html" class="link current">Студия</a>
+              </li>
+              <li class="item item-nav">
+                <a href="./portfolio.html" class="link">Портфолио</a>
+              </li>
+              <li class="item item-nav">
+                <a href="" class="link">Контакты</a>
+              </li>
+            </ul>
+          </div>
         </nav>
 
         <address>
-          <ul class="addr-links list">
-            <li class="item">
-              <a href="mailto:info@devstudio.com" class="link mail">
-                <svg class="mail-icon" width="16" height="12">
-                  <use
-                    href="./images/symbol-defs.svg#icon-envelope-hover"
-                  ></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="item">
-              <a href="tel.:+380961111111" class="link telephone">
-                <svg class="phone-icon" width="10" height="16">
-                  <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
+          <div class="navigation-wrap">
+            <ul class="addr-links list">
+              <li class="item">
+                <a href="mailto:info@devstudio.com" class="link mail">
+                  <svg class="mail-icon" width="16" height="12">
+                    <use
+                      href="./images/symbol-defs.svg#icon-envelope-hover"
+                    ></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="item">
+                <a href="tel.:+380961111111" class="link telephone">
+                  <svg class="phone-icon" width="10" height="16">
+                    <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </div>
         </address>
       </div>
     </header>
@@ -242,8 +247,8 @@
 
     <!--Подвал страницы-->
     <footer class="page-footer">
-      <div class="footer-div container flexbox">
-        <div class="container-footer addr-conteiner">
+      <div class="flex-container container flexbox">
+        <section class="container-footer addr-conteiner">
           <a href="index.html" class="logo-footer content-box"
             ><span class="logo-header">Web</span>Studio</a
           >
@@ -254,19 +259,21 @@
                 г. Киев, пр-т Леси Украинки, 26
               </li>
               <li class="addr-marg content-box">
-                <a href="mailto:info@devstudio.com" class="link"
+                <a href="mailto:info@devstudio.com" class="link address-link"
                   >info@devstudio.com</a
                 >
               </li>
               <li>
-                <a href="tel.:+380961111111" class="link">+38 096 111 11 11</a>
+                <a href="tel.:+380961111111" class="link address-link"
+                  >+38 096 111 11 11</a
+                >
               </li>
             </ul>
           </address>
-        </div>
-        <div class="container-footer icons-container">
+        </section>
+        <section class="container-footer icons-container">
           <p class="footer-title content-box">присоединяйтесь</p>
-          <ul class="list flex">
+          <ul class="list flex address-link">
             <li class="social-icon-item">
               <a
                 class="social-icon-link footer-social-link"
@@ -320,9 +327,9 @@
               </a>
             </li>
           </ul>
-        </div>
+        </section>
 
-        <div class="container-footer email-container">
+        <section class="container-footer email-container">
           <p class="newsletter-title">Подпишитесь на рассылку</p>
 
           <label class="label-submit"> </label>
@@ -342,7 +349,7 @@
               </svg>
             </button>
           </div>
-        </div>
+        </section>
       </div>
     </footer>
   </body>

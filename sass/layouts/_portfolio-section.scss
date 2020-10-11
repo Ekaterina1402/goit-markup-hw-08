@@ -1,11 +1,33 @@
 .projects {
   background-color: $accent-color;
-  padding-top: 94px;
-  padding-bottom: 100px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include for-size(desktop) {
+    padding-top: 94px;
+    padding-bottom: 100px;
+  }
 }
 .button-links {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (min-width: 319px) and (max-width: 767px) {
+    justify-content: start;
+    padding-bottom: 40px;
+  }
+
+  @include for-size(desktop) {
+    width: 1200px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .button-links .link {
@@ -20,7 +42,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
-  margin-bottom: 50px;
+  margin-bottom: 5px;
   transition: color $timing-function, background $timing-function;
 
   &:not(:last-child) {
@@ -31,6 +53,9 @@
   &:focus {
     color: $third-background-color;
     background: $second-accent-color;
+  }
+  @include for-size(tablet) {
+    margin-bottom: 50px;
   }
 }
 .projects-list .title-projects {
@@ -89,19 +114,35 @@
 }
 
 .grid-item {
-  max-width: 370px;
-  width: calc((100% - 30px * 2) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
+  width: 100%;
   background-color: $accent-color;
   border: 1px solid #eeeeee;
 
-  &:nth-child(3n) {
-    margin-right: 0;
+  &:not(:last-child) {
+    margin-bottom: 30px;
   }
 
-  &:nth-last-child(-n + 3) {
-    margin-bottom: 0;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    max-width: 354px;
+    width: calc((100% - 30px * 1) / 2);
+    margin-right: 30px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+  @include for-size(desktop) {
+    margin-right: 30px;
+    margin-bottom: 30px;
+    max-width: 370px;
+    width: calc((100% - 30px * 2) / 3);
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0;
+    }
   }
 }
 .projects-link:hover,
@@ -117,6 +158,7 @@
   position: relative;
   overflow: hidden;
 }
+
 .img-title {
   position: absolute;
   left: 0;
